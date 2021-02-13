@@ -1,2 +1,2 @@
 # mycli-container
-mycli in a docker conatiner
+mycli in a docker container
