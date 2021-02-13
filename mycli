@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -Eeuo pipefail
+
+MYCLI_DOCKER_IMAGE=triarius/mycli:${TAG:-latest}
+
+exec docker run --rm -it --user "$(id -u):$(id -g)" --volume ~/.local/share/mycli:/mycli -e HOME=/mycli "$MYCLI_DOCKER_IMAGE" "$@"
